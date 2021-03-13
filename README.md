@@ -2,3 +2,8 @@
 
 npm package.json
 nodemon
+Separacion logica del codigo en diferentes achivos
+Exportacion y requerimiento  de archivos
+Requerimientos de modulos de node
+Creacion de archivos con modulo fs
+Instalacion de dependencias
