@@ -1,20 +1,27 @@
 //IMPORT documentacion de Node para escribir archivos del SO
 const fs = require('fs');
+const colors=require("colors")
+const { argv } = require('process');
 const {logica}= require("./logica");
 
+
 //Creo funcion 
-const multiplicar=(base)=>{
-    console.log("==================");
-    console.log(`   Tabla del ${base}`);
-    console.log("==================");
+const multiplicar=(base,limite,visualizar)=>{
 
-    const resultado=logica(base);
 
-    console.log(resultado);
-    const nombreArchivo = `tablas/tabla-del-${base}`;
+    const resultado=logica(base,limite);
+
+    if(visualizar){
+        console.log("==================");
+        console.log(`   Tabla del ${base}`);
+        console.log("==================");
+        console.log(resultado);
+    }
+
+    const nombreArchivo = `tablas/tabla-del-${base}.txt`;
     fs.writeFile(nombreArchivo,resultado,(err) => {
         if (err) throw err;
-        console.log(`El archivo ${nombreArchivo} fue creado`);
+        console.log(`El archivo ${nombreArchivo} fue creado`.green);
       });
 
 

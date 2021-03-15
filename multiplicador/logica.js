@@ -1,8 +1,9 @@
+const { argv } = require("yargs");
 
 
-const logica=(base)=>{
+const logica=(base,limite)=>{
     let resultado="";
-    for(i=1;i<=10;i++){
+    for(i=1;i<=limite;i++){
         resultado +=`${base} * ${i} = ${base*i}\n`
     }
     return resultado;
