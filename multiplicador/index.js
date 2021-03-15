@@ -1,7 +1,6 @@
 //IMPORT documentacion de Node para escribir archivos del SO
 const fs = require('fs');
 const colors=require("colors")
-const { argv } = require('process');
 const {logica}= require("./logica");
 
 
